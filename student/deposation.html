@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body onload="t()">
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Deposit Form</span></div>
+        <form action="" method="post">
+          <div class="row">
+            <input
+              type="text"
+              name="apogee"
+              id="apogee"
+              disabled
+              value=""
+              required
+            />
+          </div>
+          <label>Submit the first version of the report</label>
+          <div class="row"><input type="file"/ name="sfr"></div>
+          <label>Submit the corrected version of the report</label>
+          <div class="row">
+            <input type="file" name="scv" />
+          </div>
+          <label>Submit the presentation</label>
+          <div class="row">
+            <input type="file" name="sp" />
+          </div>
+          <label
+            >Submit the internship certificate and the evaluation sheet</label
+          >
+          <div class="row">
+            <input type="file" name="sic" />
+          </div>
+          <div class="row button">
+            <a href="./student.html"><input type="button" value="deposit" style="justify-content:center;" /></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .wrapper form .row input {
+    height: 68%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  label {
+    margin-bottom: 20px;
+  }
+  .wrapper form .row input {
+    height: 68%;
+    width: 100%;
+    outline: none;
+    padding-left: 0px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+</style>
+
+<script>
+  function t() {
+    let itemNew = window.localStorage.getItem("name");
+    let id = (document.querySelector("#apogee").value = itemNew);
+    console.log(itemNew);
+  } 
+</script>
